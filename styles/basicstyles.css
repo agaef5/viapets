@@ -9,5 +9,9 @@ dark green: #3e570f
 light green: #94d025
 white: #f7fcee
 salmon (light brown): #dd6e42
-maroon (brown): #540b0e   
+maroon (brown): #540b0e
+
+REMEMBER TO RUN: "npm run bootstrap@3"
+in project directory to install bootstrap 3
+f.e. PS C:\Users\agafu\Documents\GitHub\viapets> (here you start writing: npm install bootstrap@3)
 */
