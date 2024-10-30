@@ -1,0 +1,16 @@
+.bg-nice-colorek {
+  background: rgba(148, 208, 37, 0.2);
+}
+
+.content-container {
+  width: 80% !important;
+}
+
+.description-text {
+  width: 40% !important;
+  text-align: justify;
+}
+
+.date-picker {
+  border-radius: 0.75rem !important;
+}
