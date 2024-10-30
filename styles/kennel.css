@@ -1,5 +1,5 @@
 .bg-nice-colorek {
-  background: rgba(148, 208, 37, 0.2);
+  background: rgba(62, 87, 15, 1);
 }
 
 .content-container {
@@ -11,6 +11,51 @@
   text-align: justify;
 }
 
-.date-picker {
+.border-radius {
   border-radius: 0.75rem !important;
+}
+
+h1 {
+  color: #f7fcee;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+@media screen and (max-width: 1100px) {
+  h1 {
+    text-align: center;
+  }
+
+  .first-section {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  .second-section {
+    flex-direction: column-reverse !important;
+    gap: 1rem !important;
+  }
+
+  .from-to-dates {
+    flex-direction: column !important;
+  }
+
+  .from-to-dates input,
+  .from-to-dates span {
+    width: 100% !important;
+  }
+
+  .content-container {
+    width: 95% !important;
+  }
+
+  .description-text {
+    width: 100% !important;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 1.5rem !important;
+  }
 }

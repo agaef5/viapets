@@ -6,6 +6,12 @@ html {
   padding: 0;
 }
 
+.navbar a {
+  color: #0e1111;
+  font-weight: 600;
+  font-style: normal;
+}
+
 /* 
 dark green: #3e570f
 light green: #94d025
