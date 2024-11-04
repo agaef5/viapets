@@ -1,0 +1,151 @@
+/* Color Variables */
+:root {
+  --dark-green: #3e570f;
+  --light-green: #94d025;
+  --white: #f7fcee;
+  --salmon: #dd6e42;
+  --maroon: #540b0e;
+}
+
+/* 
+       blue #214a66
+       red #f0574f
+       light blue #70c6d3
+        yellow #f4c43c
+        green #81b972
+        grey #cfb79b
+  
+  
+  
+  */
+
+body {
+  background-color: var(--white);
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.mapswrapper {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  width: 85%;
+}
+
+.mapswrapper iframe {
+  border: 2px solid var(--salmon);
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  border-radius: 2px;
+  /* Optional: rounded corners */
+  display: block;
+  width: 100%;
+  /* Full width */
+  height: 300px;
+  /* Set height */
+}
+
+.mapswrapper a {
+  color: rgba(0, 0, 0, 0);
+  /* Hidden link */
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+/* Carousel Styles */
+.carousel {
+  max-width: 50%;
+  /* Adjust to your desired width */
+  margin: 0 auto;
+  /* Center the carousel */
+  position: relative;
+  /* Needed for absolute positioning of controls */
+}
+
+.carousel-inner img {
+  margin: 0 auto;
+  /* Center the images horizontally */
+  width: 100%;
+  /* Ensure the images take the full width */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel {
+    max-width: 100%;
+    /* Full width on smaller screens */
+  }
+
+  .mapswrapper {
+    padding: 20px;
+    /* Less padding on small screens */
+  }
+}
+
+/* Carousel Control Icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--dark-green);
+  /* Green background for control icons */
+  border-radius: 50%;
+  /* Optional: make them round */
+}
+
+.custom-footer {
+  background: linear-gradient(
+    to bottom,
+    rgba(84, 11, 14, 0),
+    rgba(33, 74, 90, 255) 30%
+  );
+  /* Light background color */
+  color: #343a40;
+  /* Dark text color */
+  margin-top: 10px;
+  /* Adjust margin top */
+  padding: 20px;
+  /* Padding around the footer */
+}
+
+footer svg {
+  height: 50px;
+  width: auto;
+  margin: 20px;
+  color: #f7fcee;
+  transition: 0.5s;
+  opacity: 0.7;
+}
+
+footer a:hover svg {
+  color: #f7fcee;
+  opacity: 1;
+}
+
+.text-small {
+  font-size: 0.8rem;
+  /* Smaller text size */
+}
+
+.text-right {
+  text-align: right;
+  /* Align text to the right */
+}
