@@ -1,62 +1,36 @@
-.bg-nice-colorek {
-    background: rgba(62, 87, 15, 1);
-  }
-  
-  .content-container {
-    width: 80% !important;
-  }
-  
-  .description-text {
-    width: 40% !important;
-    text-align: justify;
-  }
-  
-  .border-radius {
-    border-radius: 0.75rem !important;
-  }
-  
-  h1 {
-    color: #f7fcee;
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-  }
-  
-  @media screen and (max-width: 1100px) {
-    h1 {
-      text-align: center;
-    }
-  
-    .first-section {
-      flex-direction: column !important;
-      gap: 1rem !important;
-    }
-  
-    .second-section {
-      flex-direction: column-reverse !important;
-      gap: 1rem !important;
-    }
-  
-    .from-to-dates {
-      flex-direction: column !important;
-    }
-  
-    .from-to-dates input,
-    .from-to-dates span {
-      width: 100% !important;
-    }
-  
-    .content-container {
-      width: 95% !important;
-    }
-  
-    .description-text {
-      width: 100% !important;
-    }
-  
-    h2 {
-      text-align: center;
-      font-size: 1.5rem !important;
-    }
-  }
-  
+.custom-footer {
+  background: linear-gradient(to bottom,
+      rgba(84, 11, 14, 0),
+      rgba(33, 74, 90, 255) 30%);
+  /* Light background color */
+  color: #343a40;
+  /* Dark text color */
+  margin-top: 10px;
+  /* Adjust margin top */
+  padding: 20px;
+  /* Padding around the footer */
+}
+
+footer svg {
+  height: 50px;
+  width: auto;
+  margin: 20px;
+  color: #f7fcee;
+  transition: 0.5s;
+  opacity: 0.7;
+}
+
+footer a:hover svg {
+  color: #f7fcee;
+  opacity: 1;
+}
+
+.text-small {
+  font-size: 0.8rem;
+  /* Smaller text size */
+}
+
+.text-right {
+  text-align: right;
+  /* Align text to the right */
+}
