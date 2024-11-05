@@ -20,24 +20,51 @@
   */
 
 body {
-  background-color: var(--white);
+  background: rgba(62, 87, 15, 1);
 }
 
+
+h1 {
+  color: #f7fcee;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 2.5rem;
+}
+
+
+
+h2 {
+  color: black;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+h3 {
+  color: black#f7fcee;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+h4,
 p {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
+  color: black#f7fcee;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
   font-style: normal;
+  font-size: 1rem;
+
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Poppins", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
+.title {
+  text-align: center;
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+  max-width: 100%;
 }
 
 .mapswrapper {
@@ -45,15 +72,17 @@ h4 {
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 50px;
   width: 85%;
 }
 
 .mapswrapper iframe {
-  border: 2px solid var(--salmon);
+  border: 2px solid white;
+  border-radius: 0.75rem !important;
   position: relative;
   z-index: 2;
   margin: auto;
+  margin-top: 70px;
+  margin-bottom: 70px;
   border-radius: 2px;
   /* Optional: rounded corners */
   display: block;
@@ -74,12 +103,22 @@ h4 {
 
 /* Carousel Styles */
 .carousel {
-  max-width: 50%;
+
+  max-width: 100%;
   /* Adjust to your desired width */
   margin: 0 auto;
   /* Center the carousel */
   position: relative;
   /* Needed for absolute positioning of controls */
+
+}
+
+div .row {
+  --bs-gutter-x: 0 !important;
+}
+
+.col-md-5 {
+  padding-right: 0 !important;
 }
 
 .carousel-inner img {
@@ -87,7 +126,47 @@ h4 {
   /* Center the images horizontally */
   width: 100%;
   /* Ensure the images take the full width */
+  border: 2px solid white;
+  border-radius: 0.75rem !important;
+
 }
+
+@media (min-width: 1161px) {
+
+  .contact-block-text {
+    min-height: 480px;
+    padding: 20px;
+  }
+
+  .carousel {
+    min-height: 480px;
+    padding: 20px;
+
+  }
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  /* Space between elements */
+}
+
+/* At 1160px or less, stack items vertically */
+@media (max-width: 1160px) {
+  .row {
+    flex-direction: column;
+    /* Stack items vertically */
+  }
+
+  .carousel,
+  .contact-block,
+  .contact-block-text {
+    max-width: 100%;
+    /* Ensure each section takes full width */
+    align-items: center;
+  }
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -100,6 +179,12 @@ h4 {
     padding: 20px;
     /* Less padding on small screens */
   }
+
+  .contact-block {
+    margin-right: 20px;
+    margin-left: 20px;
+
+  }
 }
 
 /* Carousel Control Icons */
@@ -111,41 +196,86 @@ h4 {
   /* Optional: make them round */
 }
 
-.custom-footer {
-  background: linear-gradient(
-    to bottom,
-    rgba(84, 11, 14, 0),
-    rgba(33, 74, 90, 255) 30%
-  );
-  /* Light background color */
-  color: #343a40;
-  /* Dark text color */
-  margin-top: 10px;
-  /* Adjust margin top */
-  padding: 20px;
-  /* Padding around the footer */
+
+.navbar {
+
+  background-color: #ffffff;
+
 }
 
-footer svg {
-  height: 50px;
-  width: auto;
-  margin: 20px;
-  color: #f7fcee;
-  transition: 0.5s;
-  opacity: 0.7;
+.footer-basic {
+  padding: 20px 0;
+  background-color: #ffffff;
+  color: #4b4c4d;
 }
 
-footer a:hover svg {
-  color: #f7fcee;
+.footer-basic ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-basic li {
+  padding: 0 10px;
+}
+
+.footer-basic ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
   opacity: 1;
 }
 
-.text-small {
-  font-size: 0.8rem;
-  /* Smaller text size */
+.footer-basic .social {
+  text-align: center;
+  padding-bottom: 25px;
 }
 
-.text-right {
-  text-align: right;
-  /* Align text to the right */
+.footer-basic .social>a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.footer-basic .social>a:hover {
+  opacity: 0.9;
+}
+
+.footer-basic .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
+}
+
+.contact-block {
+  background-color: white;
+  border-radius: 0.75rem !important;
+
+}
+
+.contact-block-text {
+  padding: 24px;
+}
+
+.contact-carusel-block {
+
+  padding-right: 0;
+  align-items: center;
+
 }
