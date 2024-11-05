@@ -1,5 +1,6 @@
 body,
 html {
+  background: #f7fcee;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -8,6 +9,7 @@ html {
 
 .navbar a {
   color: #0e1111;
+  background-color: #f7fcee;
   font-weight: 600;
   font-style: normal;
 }
