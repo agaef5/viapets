@@ -125,26 +125,15 @@ div .row {
 .carousel-inner img {
   margin: 0 auto;
   /* Center the images horizontally */
-  width: 100%;
+  height: 100%;
   /* Ensure the images take the full width */
   border: 2px solid white;
   border-radius: 0.75rem !important;
+  object-fit: cover;
 
 }
 
-@media (min-width: 1161px) {
 
-  .contact-block-text {
-    min-height: 480px;
-    padding: 20px;
-  }
-
-  .carousel {
-    min-height: 480px;
-    padding: 20px;
-
-  }
-}
 
 .row {
   display: flex;
@@ -153,40 +142,10 @@ div .row {
 }
 
 /* At 1160px or less, stack items vertically */
-@media (max-width: 1160px) {
-  .row {
-    flex-direction: column;
-    /* Stack items vertically */
-  }
 
-  .carousel,
-  .contact-block,
-  .contact-block-text {
-    max-width: 100%;
-    /* Ensure each section takes full width */
-    align-items: center;
-  }
-}
 
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .carousel {
-    max-width: 100%;
-    /* Full width on smaller screens */
-  }
-
-  .mapswrapper {
-    padding: 20px;
-    /* Less padding on small screens */
-  }
-
-  .contact-block {
-    margin-right: 20px;
-    margin-left: 20px;
-
-  }
-}
 
 /* Carousel Control Icons */
 .carousel-control-prev-icon,
@@ -271,12 +230,40 @@ div .row {
 }
 
 .contact-block-text {
-  padding: 24px;
+  flex-grow: 1;
+  padding: 20px;
 }
 
 .contact-carusel-block {
 
   padding-right: 0;
   align-items: center;
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
 
+.contact-block,
+.carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 1160px) {
+
+  .mapswrapper {
+    padding: 20px;
+    /* Less padding on small screens */
+  }
+
+  .contact-carusel-block {
+    flex-direction: column;
+  }
+
+  .contact-block,
+  .carousel {
+    max-width: 100%;
+    /* Ensure full width */
+  }
 }
