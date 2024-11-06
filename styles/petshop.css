@@ -1,0 +1,60 @@
+
+body
+{
+    background-color: #bcce99;
+}
+
+a:link {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.filter-bar {
+/*     background-color: #3f6e2f83; */
+background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+/* .form-control{
+    background-color: #bee33960;
+    border: 1px solid #bee33960;
+} */
+
+.filter-bar .row {
+    justify-content: center;
+}
+
+
+
+.card {
+    border: 1px solid #FAEBD7;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+}
+
+.card-title {
+    font-size: 150%;
+    margin-bottom: 1%;
+}
+
+.card-text {
+    font-size: 100%;
+    margin-bottom: 1%;
+}
+
+
+.card-img-top {
+    width: 100%;        
+    height: 200px;
+    object-fit: cover; 
+}
