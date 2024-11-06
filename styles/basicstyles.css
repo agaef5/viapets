@@ -1,7 +1,20 @@
 body,
 html {
+  background: #f7fcee;
   height: 100%;
-  width: 100vw;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: #0e1111;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.navbar {
+  background-color: #f7fcee;
 }
 
 /* 

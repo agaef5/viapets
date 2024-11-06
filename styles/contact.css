@@ -1,18 +1,282 @@
- .mapswrapper {
-     background: #fff;
-     position: relative
- }
+/* Color Variables */
+:root {
+  --dark-green: #3e570f;
+  --light-green: #94d025;
+  --white: #f7fcee;
+  --salmon: #dd6e42;
+  --maroon: #540b0e;
+}
 
- .mapswrapper iframe {
-     border: 0;
-     position: relative;
-     z-index: 2
- }
+/* 
+       blue #214a66
+       red #f0574f
+       light blue #70c6d3
+        yellow #f4c43c
+        green #81b972
+        grey #cfb79b
+  
+  
+  
+  */
 
- .mapswrapper a {
-     color: rgba(0, 0, 0, 0);
-     position: absolute;
-     left: 0;
-     top: 0;
-     z-index: 0
- }
+body,
+html {
+  background: rgba(62, 87, 15, 1) !important;
+}
+
+
+h1 {
+  color: #f7fcee;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 2.5rem;
+}
+
+
+
+h2 {
+  color: black;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+h3 {
+  color: black;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+h4,
+p {
+  color: black;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1rem;
+
+}
+
+.title {
+  text-align: center;
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+  max-width: 100%;
+}
+
+.mapswrapper {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 85%;
+}
+
+.mapswrapper iframe {
+  border: 2px solid white;
+  border-radius: 0.75rem !important;
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  border-radius: 2px;
+  /* Optional: rounded corners */
+  display: block;
+  width: 100%;
+  /* Full width */
+  height: 300px;
+  /* Set height */
+}
+
+.mapswrapper a {
+  color: rgba(0, 0, 0, 0);
+  /* Hidden link */
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+/* Carousel Styles */
+.carousel {
+
+  max-width: 100%;
+  /* Adjust to your desired width */
+  margin: 0 auto;
+  /* Center the carousel */
+  position: relative;
+  /* Needed for absolute positioning of controls */
+
+}
+
+div .row {
+  --bs-gutter-x: 0 !important;
+}
+
+.col-md-5 {
+  padding-right: 0 !important;
+}
+
+.carousel-inner img {
+  margin: 0 auto;
+  /* Center the images horizontally */
+  width: 100%;
+  /* Ensure the images take the full width */
+  border: 2px solid white;
+  border-radius: 0.75rem !important;
+
+}
+
+@media (min-width: 1161px) {
+
+  .contact-block-text {
+    min-height: 480px;
+    padding: 20px;
+  }
+
+  .carousel {
+    min-height: 480px;
+    padding: 20px;
+
+  }
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  /* Space between elements */
+}
+
+/* At 1160px or less, stack items vertically */
+@media (max-width: 1160px) {
+  .row {
+    flex-direction: column;
+    /* Stack items vertically */
+  }
+
+  .carousel,
+  .contact-block,
+  .contact-block-text {
+    max-width: 100%;
+    /* Ensure each section takes full width */
+    align-items: center;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel {
+    max-width: 100%;
+    /* Full width on smaller screens */
+  }
+
+  .mapswrapper {
+    padding: 20px;
+    /* Less padding on small screens */
+  }
+
+  .contact-block {
+    margin-right: 20px;
+    margin-left: 20px;
+
+  }
+}
+
+/* Carousel Control Icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--dark-green);
+  /* Green background for control icons */
+  border-radius: 50%;
+  /* Optional: make them round */
+}
+
+
+.navbar {
+
+  background-color: #ffffff;
+
+}
+
+.footer-basic {
+  padding: 20px 0;
+  background-color: #ffffff;
+  color: #4b4c4d;
+}
+
+.footer-basic ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-basic li {
+  padding: 0 10px;
+}
+
+.footer-basic ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity: 1;
+}
+
+.footer-basic .social {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.footer-basic .social>a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.footer-basic .social>a:hover {
+  opacity: 0.9;
+}
+
+.footer-basic .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
+}
+
+.contact-block {
+  background-color: white;
+  border-radius: 0.75rem !important;
+
+}
+
+.contact-block-text {
+  padding: 24px;
+}
+
+.contact-carusel-block {
+
+  padding-right: 0;
+  align-items: center;
+
+}
