@@ -36,9 +36,8 @@ footer a:hover svg {
 }
 
 .petsbg{
-  background-image: url(../images/Pets.jpg);
-  background-color: black;
+  background-image: url(../images/Pets-removebg.png);
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 400px; 
 }
