@@ -1,6 +1,6 @@
 body,
 html {
-  background: #f7fcee;
+background-color: #bcce99;;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -14,7 +14,7 @@ html {
 }
 
 .navbar {
-  background-color: #f7fcee;
+  background-color: white;
 }
 
 /* 
