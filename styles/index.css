@@ -34,7 +34,7 @@ body {
 
 .petshop,
 .pethotel {
-  background-color: #bcce99 !important;
+  box-shadow: #bcce99 5px;
 }
 
 /* Media queries */
