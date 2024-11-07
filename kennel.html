@@ -39,7 +39,7 @@
     <link rel="icon" type="image/x-icon" href="petshop.pics/bag.png" />
   </head>
   <body>
-    <nav class="navbar navbar-expand navbar-light">
+    <nav class="navbar navbar-expand-md navbar-light px-3 fixed-top">
       <a class="navbar-brand px-3" href="index.html">
         <img
           src="petshop.pics/bag.png"
@@ -49,21 +49,23 @@
         />
         VIAPets
       </a>
+
       <button
         class="navbar-toggler"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-3">
           <li class="nav-item">
-            <a href="index.html" class="nav-link">
+            <a href="index.html" class="nav-link active">
               <span class="link-text">Home</span>
             </a>
           </li>
@@ -73,7 +75,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="kennel.html" class="nav-link active">
+            <a href="kennel.html" class="nav-link">
               <span class="link-text">Kennel</span>
             </a>
           </li>
@@ -86,7 +88,9 @@
       </div>
     </nav>
 
-    <div class="container-fluid bg-nice-colorek d-flex justify-content-center">
+    <div
+      class="top-space container-fluid bg-nice-colorek d-flex justify-content-center"
+    >
       <div
         class="content-container d-flex flex-column align-items-center justify-content-center"
       >
@@ -308,8 +312,18 @@
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
   </body>
