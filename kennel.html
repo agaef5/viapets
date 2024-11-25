@@ -143,52 +143,57 @@
             </div>
           </div>
 
-          <!-- <div class="d-flex"> -->
           <div class="card border-radius px-5" style="height: max-content">
             <div class="card-body d-flex justify-content-around flex-column">
-              <div class="alert alert-danger" role="alert">
-                Unfortunately, there is no room available in the given time
-                period
+              <div id="not-available" class="alert alert-danger" role="alert">
+                <!-- Unfortunately, there is no room available in the given time
+                period -->
               </div>
 
-              <div class="input-group from-to-dates">
-                <span class="input-group-text">From</span>
+              <div id="availability-input">
+                <div class="input-group from-to-dates">
+                  <span class="input-group-text">From</span>
 
-                <input
-                  type="date"
-                  class="form-control"
-                  placeholder="Username"
-                  aria-label="Username"
-                />
-                <span class="input-group-text">To</span>
-                <input
-                  type="date"
-                  class="form-control"
-                  placeholder="Server"
-                  aria-label="Server"
-                />
+                  <input id="start-date" type="date" />
+                  <span class="input-group-text">To</span>
+                  <input id="end-date" type="date" />
+                </div>
+                <div class="input-group w-100 mt-3">
+                  <div class="input-group mb-3 w-100">
+                    <select class="form-select w-75" id="inputGroupSelect02">
+                      <option selected>1</option>
+                      <option value="1">2</option>
+                      <option value="2">3</option>
+                      <option value="3">4</option>
+                      <option value="3">5</option>
+                      <option value="3">6</option>
+                      <option value="3">7</option>
+                      <option value="3">8</option>
+                      <option value="3">9</option>
+                      <option value="3">10</option>
+                    </select>
+                    <label
+                      class="input-group-text w-25"
+                      for="inputGroupSelect02"
+                      >pet(s)</label
+                    >
+                  </div>
+                </div>
               </div>
-              <div class="input-group w-100 mt-3">
-                <div class="input-group mb-3 w-100">
-                  <select class="form-select w-75" id="inputGroupSelect02">
-                    <option selected>1</option>
-                    <option value="1">2</option>
-                    <option value="2">3</option>
-                    <option value="3">4</option>
-                    <option value="3">5</option>
-                    <option value="3">6</option>
-                    <option value="3">7</option>
-                    <option value="3">8</option>
-                    <option value="3">9</option>
-                    <option value="3">10</option>
-                  </select>
-                  <label class="input-group-text w-25" for="inputGroupSelect02"
-                    >pet(s)</label
-                  >
+
+              <div id="available">
+                <h5 class="text-center">Kennel is available!</h5>
+                <div class="text-center mb-3">
+                  Choosen period <span id="chosen-period"></span> is free for
+                  your pets! <br />
+                  To book, reach to us! <br />
+                  Phone: 1234567890 <br />
+                  Email: <a href="mailto:viapets@mail.dk">viapets@mail.dk</a>
                 </div>
               </div>
 
               <button
+                id="check-availability"
                 type="button"
                 class="btn btn-success"
                 data-toggle="modal"
@@ -241,38 +246,7 @@
       aria-labelledby="exampleModalCenterTitle"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">
-              Kennel is available!
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body text-center">
-            Choosen period is free for your pets! <br />
-            To book, reach to us! <br />
-            Phone: 1234567890 <br />
-            Email: <a href="mailto:viapets@mail.dk">viapets@mail.dk</a>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
+      <div class="modal-dialog modal-dialog-centered" role="document"></div>
     </div>
 
     <div class="footer-basic">
@@ -293,13 +267,8 @@
       </footer>
     </div>
 
-    <script src="scripts/calendar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -320,5 +289,8 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
+
+    <script src="scripts/calendar.js"></script>
+    <script src="scripts/kennelavailability.js"></script>
   </body>
 </html>
