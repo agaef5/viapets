@@ -2,6 +2,7 @@
 
 #not-available {
   display: none;
+  max-width: 30vw !important;
 }
 
 #available {
@@ -44,9 +45,13 @@ h1 {
     gap: 1rem !important;
   }
 
-  .from-to-dates {
-    flex-direction: column !important;
+  .availability-card {
+    max-width: 30vw !important;
   }
+
+  /* .from-to-dates {
+    flex-direction: column !important;
+  } */
 
   .from-to-dates input,
   .from-to-dates span {

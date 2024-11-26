@@ -26,6 +26,12 @@ const months = [
 
 // Function to generate the calendar
 const manipulate = () => {
+  console.log(
+    reservationStart != null,
+    reservationStart,
+    reservationEnd != null,
+    reservationEnd
+  );
   // Get the first day of the month
   let dayone = new Date(year, month, 1).getDay();
 
@@ -53,9 +59,42 @@ const manipulate = () => {
       i === date.getDate() &&
       month === new Date().getMonth() &&
       year === new Date().getFullYear()
-        ? "active"
+        ? " active"
         : "";
-    lit += `<li class="${isToday}">${i}</li>`;
+
+    let isReservation = "";
+    let isDuringReservation = "";
+
+    if (reservationEnd != null && reservationStart != null) {
+      let currentDate = new Date(year, month, i);
+      isReservation =
+        currentDate.toLocaleDateString() == reservationStart &&
+        currentDate.toLocaleDateString() == reservationEnd
+          ? " reservationStartAndEnd"
+          : currentDate.toLocaleDateString() == reservationStart
+          ? " reservationStart"
+          : currentDate.toLocaleDateString() == reservationEnd
+          ? " reservationEnd"
+          : "";
+
+      if (currentDate.toLocaleDateString() == reservationStart) {
+        console.log("Start: " + reservationStart);
+      }
+
+      if (currentDate.toLocaleDateString() == reservationEnd) {
+        console.log("End: " + reservationEnd);
+      }
+
+      isDuringReservation =
+        new Date(reservationStart).getTime() < currentDate.getTime() &&
+        new Date(reservationEnd).getTime() > currentDate.getTime()
+          ? " reservation-period"
+          : "";
+    }
+
+    lit += `<li id="${
+      i + "/" + (month + 1) + "/" + year
+    }" class="date ${isToday}${isReservation}${isDuringReservation}">${i}</li>`;
   }
 
   // Loop to add the first dates of the next month

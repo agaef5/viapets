@@ -1,13 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <reservations>
-    <reservation>
-        <roomNumber>1</roomNumber>
-        <startDay>2024-11-01</startDay>
-        <endDay>2024-11-05</endDay>
-    </reservation>
-    <reservation>
-        <roomNumber>2</roomNumber>
-        <startDay>2024-11-03</startDay>
-        <endDay>2024-11-08</endDay>
-    </reservation>
+  <!-- Fully booked days for Room 1 -->
+  <reservation>
+    <roomNumber>1</roomNumber>
+    <startDay>2024-11-01</startDay>
+    <endDay>2024-11-05</endDay>
+  </reservation>
+  <reservation>
+    <roomNumber>1</roomNumber>
+    <startDay>2024-11-07</startDay>
+    <endDay>2024-11-10</endDay>
+  </reservation>
+
+  <!-- Room 2 leaves a gap from Nov 6 to Nov 9 -->
+  <reservation>
+    <roomNumber>2</roomNumber>
+    <startDay>2024-11-01</startDay>
+    <endDay>2024-11-05</endDay>
+  </reservation>
+  <reservation>
+    <roomNumber>2</roomNumber>
+    <startDay>2024-11-10</startDay>
+    <endDay>2024-11-15</endDay>
+  </reservation>
+
+  <!-- Room 3 is free between Nov 12 and Nov 18 -->
+  <reservation>
+    <roomNumber>3</roomNumber>
+    <startDay>2024-11-01</startDay>
+    <endDay>2024-11-11</endDay>
+  </reservation>
+  <reservation>
+    <roomNumber>3</roomNumber>
+    <startDay>2024-11-19</startDay>
+    <endDay>2024-11-30</endDay>
+  </reservation>
+
+  <!-- Room 4 is booked all November -->
+  <reservation>
+    <roomNumber>4</roomNumber>
+    <startDay>2024-11-01</startDay>
+    <endDay>2024-11-30</endDay>
+  </reservation>
+
+  <!-- Room 5 is available Nov 15-20 -->
+  <reservation>
+    <roomNumber>5</roomNumber>
+    <startDay>2024-11-01</startDay>
+    <endDay>2024-11-14</endDay>
+  </reservation>
+  <reservation>
+    <roomNumber>5</roomNumber>
+    <startDay>2024-11-21</startDay>
+    <endDay>2024-11-30</endDay>
+  </reservation>
+
+  <!-- Rooms 6-10 are fully booked on different overlapping periods -->
+  <reservation>
+    <roomNumber>6</roomNumber>
+    <startDay>2024-11-01</startDay>
+    <endDay>2024-11-20</endDay>
+  </reservation>
+  <reservation>
+    <roomNumber>6</roomNumber>
+    <startDay>2024-11-22</startDay>
+    <endDay>2024-11-30</endDay>
+  </reservation>
+  <reservation>
+    <roomNumber>7</roomNumber>
+    <startDay>2024-11-01</startDay>
+    <endDay>2024-11-30</endDay>
+  </reservation>
+  <reservation>
+    <roomNumber>8</roomNumber>
+    <startDay>2024-11-01</startDay>
+    <endDay>2024-11-15</endDay>
+  </reservation>
+  <reservation>
+    <roomNumber>8</roomNumber>
+    <startDay>2024-11-17</startDay>
+    <endDay>2024-11-30</endDay>
+  </reservation>
+  <reservation>
+    <roomNumber>9</roomNumber>
+    <startDay>2024-11-01</startDay>
+    <endDay>2024-11-14</endDay>
+  </reservation>
+  <reservation>
+    <roomNumber>9</roomNumber>
+    <startDay>2024-11-16</startDay>
+    <endDay>2024-11-30</endDay>
+  </reservation>
+  <reservation>
+    <roomNumber>10</roomNumber>
+    <startDay>2024-11-01</startDay>
+    <endDay>2024-11-30</endDay>
+  </reservation>
 </reservations>
+

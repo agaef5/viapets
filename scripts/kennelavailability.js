@@ -1,13 +1,16 @@
+let reservationStart = null;
+let reservationEnd = null;
+
 $(document).ready(function () {
-  let buttonClicked = false;
-  let availableRoom = null;
+  let infoDivDisplayed = false;
+  let availableRooms = 0;
 
   $("#check-availability").on("click", function (event) {
-    if (buttonClicked) {
-      buttonClicked = false;
+    if (infoDivDisplayed) {
       $("#not-available").css("display", "none");
       $("#availability-input").css("display", "block");
-      if (availableRoom !== null) {
+      infoDivDisplayed = false;
+      if (availableRooms != 0) {
         $("#available").css("display", "none");
         $("#check-availability")
           .text("Check availability")
@@ -15,16 +18,13 @@ $(document).ready(function () {
           .removeClass("btn-secondary");
         return;
       }
-      availableRoom = null;
     }
-
     event.preventDefault();
-    buttonClicked = true;
-    console.log("CLICKED"); // Prevent the form from submitting normally
 
     const startDateRaw = new Date($("#start-date").val());
-    console.log("Start Date:", startDateRaw);
     const endDateRaw = new Date($("#end-date").val());
+    const amountOfPets = $("#petsAmount").val();
+    availableRooms = 0;
 
     if (
       startDateRaw == "Invalid Date" ||
@@ -34,9 +34,7 @@ $(document).ready(function () {
       $("#not-available")
         .text("Invalid dates or date range!")
         .css("display", "block");
-
-      buttonClicked = false;
-
+      infoDivDisplayed = true;
       return;
     }
 
@@ -63,11 +61,8 @@ $(document).ready(function () {
           });
         }
       });
-      //   });
 
       // Step 2: Find the first available room
-      //   let availableRoom = null;
-
       for (let roomNumber = 1; roomNumber <= 10; roomNumber++) {
         const reservations = roomReservations[roomNumber] || [];
         let isRoomAvailable = true;
@@ -81,12 +76,13 @@ $(document).ready(function () {
         }
 
         if (isRoomAvailable) {
-          availableRoom = roomNumber;
-          break; // Stop searching; found a free room
+          availableRooms++;
+          if (availableRooms == amountOfPets) break;
+          // Stop searching; found a free room
         }
       }
 
-      if (availableRoom !== null) {
+      if (availableRooms >= amountOfPets) {
         $("#chosen-period").text(
           "(" +
             startDate.toLocaleDateString() +
@@ -101,11 +97,79 @@ $(document).ready(function () {
           .addClass("btn-secondary")
           .removeClass("btn-success");
       } else {
-        $("#not-available").css("display", "block");
-        buttonClicked = false;
+        $("#not-available")
+          .css("display", "block")
+          .text(
+            "Unfortunately, there are no free \n places available during this period. \n Try other dates."
+          );
       }
+      infoDivDisplayed = true;
     }).fail(function () {
       console.error("Failed to load XML file.");
     });
   });
+
+  $(".calendar-dates").on("click", ".date", function () {
+    const selectedDateRaw = $(this).attr("id");
+
+    // Parse the `dd/mm/yyyy` format manually
+    const parts = selectedDateRaw.split("/"); // Split the input string by "/"
+    const day = parseInt(parts[0], 10);
+    const month = parseInt(parts[1], 10) - 1; // Month is zero-based
+    const year = parseInt(parts[2], 10);
+
+    let selectedDate = new Date(year, month, day).toLocaleDateString();
+
+    if (selectedDate == reservationStart && selectedDate == reservationEnd) {
+      reservationStart = null;
+      reservationEnd = null;
+    } else if (selectedDate == reservationEnd) {
+      reservationEnd = reservationStart;
+    } else if (selectedDate == reservationStart) {
+      reservationStart = reservationEnd;
+    } else if (reservationStart == null && reservationEnd == null) {
+      reservationStart = selectedDate;
+      reservationEnd = selectedDate;
+    } else if (reservationStart != null && selectedDate > reservationStart) {
+      reservationEnd = selectedDate;
+    } else if (selectedDate < reservationStart) {
+      reservationStart = selectedDate;
+    }
+
+    if (
+      new Date(reservationEnd).getTime() < new Date(reservationStart).getTime()
+    ) {
+      var temp = reservationEnd;
+      reservationEnd = reservationStart;
+      reservationStart = temp;
+    }
+
+    updateInputs();
+
+    manipulate();
+  });
+
+  $(".datepicker").change(function () {
+    const id = $(this).attr("id");
+
+    if (id == "start-date") {
+      reservationStart = new Date($("#start-date").val()).toLocaleDateString();
+      if (reservationEnd == null) reservationEnd = reservationStart;
+    } else if (id == "end-date") {
+      reservationEnd = new Date($("#end-date").val()).toLocaleDateString();
+      if (reservationStart == null) {
+        reservationStart = reservationEnd;
+      }
+    }
+
+    updateInputs();
+    manipulate();
+  });
+
+  const updateInputs = () => {
+    $("#start-date").val(
+      new Date(reservationStart).toISOString().split("T")[0]
+    );
+    $("#end-date").val(new Date(reservationEnd).toISOString().split("T")[0]);
+  };
 });
