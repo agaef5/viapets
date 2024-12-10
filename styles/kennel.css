@@ -12,6 +12,13 @@
 
 /* changeable propertie3s = end */
 
+#today-availability,
+#availability-card {
+  max-width: 450px !important;
+  width: 100% !important;
+  margin: 0 auto; /
+}
+
 .content-container {
   width: 80% !important;
 }
@@ -69,5 +76,17 @@ h1 {
   h2 {
     text-align: center;
     font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #today-availability,
+  #availability-card {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .availability-card .card-body {
+    padding: 15px;
   }
 }

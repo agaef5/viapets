@@ -5,6 +5,8 @@ $(document).ready(function () {
   let infoDivDisplayed = false;
   let availableRooms = 0;
 
+  checkTodayAvailability();
+
   $("#check-availability").on("click", function (event) {
     if (infoDivDisplayed) {
       $("#not-available").css("display", "none");
@@ -108,6 +110,57 @@ $(document).ready(function () {
       console.error("Failed to load XML file.");
     });
   });
+
+  function checkTodayAvailability() {
+    const today = new Date().toISOString().split("T")[0]; // Get today's date in 'yyyy-MM-dd' format
+    $.get("data/kennelreservations.xml", function (data) {
+      const roomReservations = parseReservations(data, today, today);
+      let todayAvailableRooms = 0;
+
+      for (let roomNumber = 1; roomNumber <= 10; roomNumber++) {
+        const reservations = roomReservations[roomNumber] || [];
+        let isRoomAvailable = true;
+
+        for (const booking of reservations) {
+          if (today >= booking.start && today <= booking.end) {
+            isRoomAvailable = false;
+            break;
+          }
+        }
+
+        if (isRoomAvailable) todayAvailableRooms++;
+      }
+
+      // Display static availability info
+      $("#today-availability").text(
+        `Rooms available today: ${todayAvailableRooms}`
+      );
+    }).fail(function () {
+      console.error("Failed to load XML file.");
+    });
+  }
+
+  function parseReservations(data, startDate, endDate) {
+    const reservations = $(data).find("reservation");
+    const roomReservations = {};
+
+    reservations.each(function () {
+      const roomNumber = parseInt($(this).find("roomNumber").text(), 10);
+      const reservationStart = new Date($(this).find("startDay").text());
+      const reservationEnd = new Date($(this).find("endDay").text());
+
+      if (!roomReservations[roomNumber]) {
+        roomReservations[roomNumber] = [];
+      }
+      if (startDate <= reservationEnd || endDate >= reservationStart) {
+        roomReservations[roomNumber].push({
+          start: reservationStart,
+          end: reservationEnd,
+        });
+      }
+    });
+    return roomReservations;
+  }
 
   $(".calendar-dates").on("click", ".date", function () {
     const selectedDateRaw = $(this).attr("id");
