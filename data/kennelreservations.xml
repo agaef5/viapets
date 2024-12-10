@@ -15,32 +15,32 @@
   <!-- Room 2 leaves a gap from Nov 6 to Nov 9 -->
   <reservation>
     <roomNumber>2</roomNumber>
-    <startDay>2024-11-01</startDay>
-    <endDay>2024-11-05</endDay>
+    <startDay>2024-12-01</startDay>
+    <endDay>2024-12-05</endDay>
   </reservation>
   <reservation>
     <roomNumber>2</roomNumber>
-    <startDay>2024-11-10</startDay>
-    <endDay>2024-11-15</endDay>
+    <startDay>2024-12-10</startDay>
+    <endDay>2024-12-15</endDay>
   </reservation>
 
   <!-- Room 3 is free between Nov 12 and Nov 18 -->
   <reservation>
     <roomNumber>3</roomNumber>
-    <startDay>2024-11-01</startDay>
-    <endDay>2024-11-11</endDay>
+    <startDay>2024-12-01</startDay>
+    <endDay>2024-12-11</endDay>
   </reservation>
   <reservation>
     <roomNumber>3</roomNumber>
-    <startDay>2024-11-19</startDay>
-    <endDay>2024-11-30</endDay>
+    <startDay>2024-12-19</startDay>
+    <endDay>2024-12-30</endDay>
   </reservation>
 
   <!-- Room 4 is booked all November -->
   <reservation>
     <roomNumber>4</roomNumber>
-    <startDay>2024-11-01</startDay>
-    <endDay>2024-11-30</endDay>
+    <startDay>2024-12-01</startDay>
+    <endDay>2024-12-30</endDay>
   </reservation>
 
   <!-- Room 5 is available Nov 15-20 -->

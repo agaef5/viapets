@@ -5,7 +5,18 @@ $(document).ready(function () {
   let infoDivDisplayed = false;
   let availableRooms = 0;
 
-  checkTodayAvailability();
+  $.get("data/kennelreservations.xml", function (data) {
+    const todayReservations = parseReservationsForToday(data);
+
+    // Example: Check available rooms
+    const totalRooms = 10;
+    const reservedRooms = todayReservations;
+    const availableRooms = totalRooms - reservedRooms;
+
+    $("#today-availability").text(`Rooms available today: ${availableRooms}`);
+  }).fail(function () {
+    console.error("Failed to load XML data.");
+  });
 
   $("#check-availability").on("click", function (event) {
     if (infoDivDisplayed) {
@@ -111,55 +122,48 @@ $(document).ready(function () {
     });
   });
 
-  function checkTodayAvailability() {
-    const today = new Date().toISOString().split("T")[0]; // Get today's date in 'yyyy-MM-dd' format
-    $.get("data/kennelreservations.xml", function (data) {
-      const roomReservations = parseReservations(data, today, today);
-      let todayAvailableRooms = 0;
-
-      for (let roomNumber = 1; roomNumber <= 10; roomNumber++) {
-        const reservations = roomReservations[roomNumber] || [];
-        let isRoomAvailable = true;
-
-        for (const booking of reservations) {
-          if (today >= booking.start && today <= booking.end) {
-            isRoomAvailable = false;
-            break;
-          }
-        }
-
-        if (isRoomAvailable) todayAvailableRooms++;
-      }
-
-      // Display static availability info
-      $("#today-availability").text(
-        `Rooms available today: ${todayAvailableRooms}`
-      );
-    }).fail(function () {
-      console.error("Failed to load XML file.");
-    });
-  }
-
-  function parseReservations(data, startDate, endDate) {
+  function parseReservationsForToday(data) {
     const reservations = $(data).find("reservation");
     const roomReservations = {};
+    let todayReservations = 0;
+
+    // Get today's date
+    const today = new Date().setHours(0, 0, 0, 0); // Normalize to midnight for accurate comparisons
 
     reservations.each(function () {
       const roomNumber = parseInt($(this).find("roomNumber").text(), 10);
-      const reservationStart = new Date($(this).find("startDay").text());
-      const reservationEnd = new Date($(this).find("endDay").text());
+      const reservationStart = new Date(
+        $(this).find("startDay").text()
+      ).setHours(0, 0, 0, 0);
+      const reservationEnd = new Date($(this).find("endDay").text()).setHours(
+        0,
+        0,
+        0,
+        0
+      );
 
       if (!roomReservations[roomNumber]) {
         roomReservations[roomNumber] = [];
       }
-      if (startDate <= reservationEnd || endDate >= reservationStart) {
+
+      if (today >= reservationStart && today <= reservationEnd) {
         roomReservations[roomNumber].push({
-          start: reservationStart,
-          end: reservationEnd,
+          start: new Date(reservationStart),
+          end: new Date(reservationEnd),
         });
+
+        todayReservations++;
+        console.log(
+          `Room ${roomNumber} is reserved from ${new Date(
+            reservationStart
+          ).toLocaleDateString()} to ${new Date(
+            reservationEnd
+          ).toLocaleDateString()}`
+        );
       }
     });
-    return roomReservations;
+
+    return todayReservations;
   }
 
   $(".calendar-dates").on("click", ".date", function () {
