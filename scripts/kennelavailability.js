@@ -55,19 +55,41 @@ $(document).ready(function () {
     const endDate = new Date(endDateRaw);
 
     $.get("data/kennelreservations.xml", function (data) {
-      const reservations = $(data).find("reservation");
+      const reservations = $(data).find("reservationList");
 
       // Step 1: Group reservations by room
       const roomReservations = {};
       reservations.each(function () {
-        const roomNumber = parseInt($(this).find("roomNumber").text(), 10);
-        const reservationStart = new Date($(this).find("startDay").text());
-        const reservationEnd = new Date($(this).find("endDay").text());
+        const roomNumber = parseInt(
+          $(this).find("kennelRoom roomNumber").text(),
+          10
+        );
+
+        const dropoffMonth =
+          parseInt($(this).find("dropOfDate month").text(), 10) - 1;
+        const dropoffYear = parseInt(
+          $(this).find("dropOfDate year").text(),
+          10
+        );
+        const dropoffDay = parseInt($(this).find("dropOfDate day").text(), 10);
+        const reservationStart = new Date(
+          dropoffYear,
+          dropoffMonth,
+          dropoffDay
+        );
+
+        const pickupMonth =
+          parseInt($(this).find("pickUpDate month").text(), 10) - 1; // Month is zero-based
+        const pickupYear = parseInt($(this).find("pickUpDate year").text(), 10);
+        const pickupDay = parseInt($(this).find("pickUpDate day").text(), 10);
+        const reservationEnd = new Date(pickupYear, pickupMonth, pickupDay);
+
+        if (!reservationStart || !reservationEnd) return;
 
         if (!roomReservations[roomNumber]) {
           roomReservations[roomNumber] = [];
         }
-        if (startDate <= reservationEnd || endDate >= reservationStart) {
+        if (startDate <= reservationEnd && endDate >= reservationStart) {
           roomReservations[roomNumber].push({
             start: reservationStart,
             end: reservationEnd,
@@ -123,7 +145,7 @@ $(document).ready(function () {
   });
 
   function parseReservationsForToday(data) {
-    const reservations = $(data).find("reservation");
+    const reservations = $(data).find("ReservationList reservationList");
     const roomReservations = {};
     let todayReservations = 0;
 
@@ -132,15 +154,20 @@ $(document).ready(function () {
 
     reservations.each(function () {
       const roomNumber = parseInt($(this).find("roomNumber").text(), 10);
-      const reservationStart = new Date(
-        $(this).find("startDay").text()
-      ).setHours(0, 0, 0, 0);
-      const reservationEnd = new Date($(this).find("endDay").text()).setHours(
-        0,
-        0,
-        0,
-        0
-      );
+
+      const dropoffMonth =
+        parseInt($(this).find("dropOfDate month").text(), 10) - 1;
+      const dropoffYear = parseInt($(this).find("dropOfDate year").text(), 10);
+      const dropoffDay = parseInt($(this).find("dropOfDate day").text(), 10);
+      const reservationStart = new Date(dropoffYear, dropoffMonth, dropoffDay);
+
+      const pickupMonth =
+        parseInt($(this).find("pickUpDate month").text(), 10) - 1;
+      const pickupYear = parseInt($(this).find("pickUpDate year").text(), 10);
+      const pickupDay = parseInt($(this).find("pickUpDate day").text(), 10);
+      const reservationEnd = new Date(pickupYear, pickupMonth, pickupDay);
+
+      console.log("today", reservationStart);
 
       if (!roomReservations[roomNumber]) {
         roomReservations[roomNumber] = [];
