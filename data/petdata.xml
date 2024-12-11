@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PetList>
+  <pets>
+    <colour>erwrwrewr</colour>
+    <gender>male</gender>
+    <price>3435.0</price>
+    <breeder>gdgrdg</breeder>
+    <name>drgdfg</name>
+    <additionalInfo>ferfge</additionalInfo>
+    <id>28e61b31-9b9a-416d-97ee-218a5ee3f236</id>
+    <type>Dog</type>
+    <breed>rteg</breed>
+    <age>23232</age>
+    <status>shop</status>
+  </pets>
+  <pets>
+    <colour>ytgfdgf</colour>
+    <gender>female</gender>
+    <price>4.5645654E7</price>
+    <breeder>sdfsfs</breeder>
+    <name>dsfsdf</name>
+    <additionalInfo>sdsff</additionalInfo>
+    <id>d13ae80f-1155-460c-9487-e9dc742a2d44</id>
+    <type>Cat</type>
+    <breed>fsfs</breed>
+    <age>54</age>
+    <status>shop</status>
+  </pets>
+</PetList>
