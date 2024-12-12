@@ -48,7 +48,7 @@ $(document).ready(function () {
 
         groupedPets[type].forEach(function (pet, index) {
           // Generate image URL based on type and index (starting from 1)
-          const imgSrc = `petshop.pics/${type}/${type}${index + 1}.webp`;
+          const imgSrc = `petshop.pics/${type}/${type}${index}.webp`;
 
           const petCard = `
             <div class="col-lg-3 mb-4">
