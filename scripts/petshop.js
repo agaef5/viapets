@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // Load the XML file using AJAX
-  $.get("data/petdata.xml", function (data) {
+  $.get("data/pet_list.xml", function (data) {
     const pets = $(data).find("pets");
 
     // Step 1: Group pets by type
@@ -39,12 +39,11 @@ $(document).ready(function () {
 
     // Iterate over each pet type and create rows for them
     Object.keys(groupedPets).forEach((type) => {
-      if (groupedPets[type].length > 0) {
-        const rowTitle = `
+      const rowTitle = `
             <div class="col-12 mb-3">
                 <h3 id="${type}">${capitalizeFirstLetter(type)}s</h3>
             </div>`;
-
+      if (groupedPets[type].length > 0) {
         petContainer.append(rowTitle); // Add title for pet type row
 
         groupedPets[type].forEach(function (pet, index) {
