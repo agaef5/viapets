@@ -26,12 +26,6 @@ const months = [
 
 // Function to generate the calendar
 const manipulate = () => {
-  console.log(
-    reservationStart != null,
-    reservationStart,
-    reservationEnd != null,
-    reservationEnd
-  );
   // Get the first day of the month
   let dayone = new Date(year, month, 1).getDay();
 

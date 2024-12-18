@@ -5,7 +5,7 @@ $(document).ready(function () {
   let infoDivDisplayed = false;
   let availableRooms = 0;
 
-  $.get("data/kennelreservations.xml", function (data) {
+  $.get("data/reservation_list.xml", function (data) {
     const todayReservations = parseReservationsForToday(data);
 
     // Example: Check available rooms
@@ -54,7 +54,7 @@ $(document).ready(function () {
     const startDate = new Date(startDateRaw);
     const endDate = new Date(endDateRaw);
 
-    $.get("data/kennelreservations.xml", function (data) {
+    $.get("data/reservation_list.xml", function (data) {
       const reservations = $(data).find("reservationList");
 
       // Step 1: Group reservations by room
@@ -173,6 +173,7 @@ $(document).ready(function () {
         roomReservations[roomNumber] = [];
       }
 
+      // If reservation falls on today, add it to the list
       if (today >= reservationStart && today <= reservationEnd) {
         roomReservations[roomNumber].push({
           start: new Date(reservationStart),
@@ -228,8 +229,9 @@ $(document).ready(function () {
       reservationStart = temp;
     }
 
+    // Update date pickers
     updateInputs();
-
+    // Update calendar
     manipulate();
   });
 
@@ -246,7 +248,9 @@ $(document).ready(function () {
       }
     }
 
+    // Update date pickers
     updateInputs();
+    // Updaate calendar
     manipulate();
   });
 
