@@ -71,14 +71,6 @@ const manipulate = () => {
           ? " reservationEnd"
           : "";
 
-      if (currentDate.toLocaleDateString() == reservationStart) {
-        console.log("Start: " + reservationStart);
-      }
-
-      if (currentDate.toLocaleDateString() == reservationEnd) {
-        console.log("End: " + reservationEnd);
-      }
-
       isDuringReservation =
         new Date(reservationStart).getTime() < currentDate.getTime() &&
         new Date(reservationEnd).getTime() > currentDate.getTime()

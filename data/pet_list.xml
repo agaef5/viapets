@@ -1,42 +1,468 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <PetList>
   <pets>
-    <colour>ryytryr</colour>
+    <colour>Brown</colour>
     <gender>male</gender>
-    <price>567.0</price>
-    <breeder>ryrtyrt</breeder>
-    <name>gjfdhfd</name>
-    <additionalInfo>rtyryr</additionalInfo>
-    <id>22dd648b-5a42-454c-a7db-6677db3579d6</id>
+    <price>2065.0</price>
+    <breeder>Unknown</breeder>
+    <name>Maximiliam the 3rd</name>
+    <additionalInfo/>
+    <id>bcc70177-2908-4cc5-a101-72a886381bc1</id>
     <type>Cat</type>
-    <breed>tryry</breed>
-    <age>56</age>
+    <breed>Cat</breed>
+    <age>12</age>
     <status>kennel</status>
   </pets>
   <pets>
-    <colour>dgdffgdg</colour>
-    <gender>female</gender>
-    <price>4.0</price>
-    <breeder>etretet</breeder>
-    <name>dgfsfr</name>
-    <additionalInfo>dgdfg</additionalInfo>
-    <id>c2b3da4c-5d30-4b4d-a3a8-8efd54e39dbe</id>
+    <colour>Black</colour>
+    <gender>male</gender>
+    <price>50.0</price>
+    <breeder>Jytte breeds dogs SRL</breeder>
+    <name>Bob</name>
+    <additionalInfo/>
+    <id>1e30b0a0-026f-4f58-bcb3-80ee299a74b7</id>
     <type>Dog</type>
-    <breed>gdgdf</breed>
-    <age>78</age>
+    <breed>dog</breed>
+    <age>3</age>
     <status>shop</status>
   </pets>
   <pets>
-    <colour>rtetg</colour>
-    <gender>male</gender>
-    <price>456.0</price>
-    <breeder>gdgd</breeder>
-    <name>tfdgfg</name>
-    <additionalInfo>retre</additionalInfo>
-    <id>7ee367ec-0ed3-408c-af86-021f55757d54</id>
-    <type>Cat</type>
-    <breed>rfgte</breed>
-    <age>45</age>
+    <colour>Green</colour>
+    <gender>undefined</gender>
+    <species>Green Anaconda</species>
+    <price>8920.65</price>
+    <name>Orion</name>
+    <additionalInfo/>
+    <id>4d5d9618-2ad3-4a87-a910-6fc4ebf7f303</id>
+    <type>Various</type>
+    <age>210</age>
     <status>shop</status>
+  </pets>
+  <pets>
+    <colour>Yellow</colour>
+    <gender>female</gender>
+    <price>50.0</price>
+    <breeder>Jytte Breeds Dogs SRL</breeder>
+    <name>Kikky</name>
+    <additionalInfo/>
+    <id>0072e150-a983-417d-b47f-84a03d11bc69</id>
+    <type>Dog</type>
+    <breed>Russian Blue</breed>
+    <age>5</age>
+    <status>kennel</status>
+  </pets>
+  <pets>
+    <colour>Brown</colour>
+    <gender>female</gender>
+    <price>50.0</price>
+    <breeder>Cat Lady</breeder>
+    <name>Verona</name>
+    <additionalInfo/>
+    <id>266483b0-d3a8-4ae9-9f84-8cf45874dede</id>
+    <type>Cat</type>
+    <breed>Bengal Cat</breed>
+    <age>50</age>
+    <status>shop</status>
+  </pets>
+  <pets>
+    <colour>Rainbow</colour>
+    <gender>undefined</gender>
+    <predator>true</predator>
+    <price>502.0</price>
+    <name>Fish</name>
+    <additionalInfo>Fishy has been archived</additionalInfo>
+    <watertype>saltWater</watertype>
+    <id>0a5e6079-1a24-4243-aa0c-5a473132cb59</id>
+    <type>Fish</type>
+    <age>1</age>
+    <status>archived</status>
+  </pets>
+  <pets>
+    <colour>Orange</colour>
+    <gender>undefined</gender>
+    <species>Sun Conure</species>
+    <price>80845.0</price>
+    <name>Bibby</name>
+    <additionalInfo/>
+    <id>7a14b9ec-4089-4584-9af5-05e16fb6f891</id>
+    <type>Bird</type>
+    <food>Yummy Exotic Pellets</food>
+    <age>89</age>
+    <status>shop</status>
+  </pets>
+  <pets>
+    <colour>Cream</colour>
+    <gender>male</gender>
+    <species>Fancy Rat</species>
+    <price>456.0</price>
+    <name>Peanut</name>
+    <additionalInfo/>
+    <id>fe23b0ae-98f3-49bf-b29d-8e4087980e93</id>
+    <type>Rodent</type>
+    <bites>true</bites>
+    <age>1</age>
+    <status>archived</status>
+  </pets>
+  <pets>
+    <colour>Black</colour>
+    <gender>male</gender>
+    <species>Unknown</species>
+    <price>565.0</price>
+    <name>Varys</name>
+    <additionalInfo/>
+    <id>d2683f62-5da2-4591-bb21-90c866dbf8ce</id>
+    <type>Various</type>
+    <age>984</age>
+    <status>archived</status>
+  </pets>
+  <pets>
+    <colour>Orange</colour>
+    <gender>undefined</gender>
+    <predator>true</predator>
+    <price>5.0</price>
+    <name>Mimi</name>
+    <additionalInfo/>
+    <watertype>freshWater</watertype>
+    <id>496c5ee9-ad61-4a84-a94a-832e9939ef6f</id>
+    <type>Fish</type>
+    <age>41</age>
+    <status>kennel</status>
+  </pets>
+  <pets>
+    <colour>Black</colour>
+    <gender>female</gender>
+    <price>4000.0</price>
+    <breeder>Jimmy</breeder>
+    <name>Mille</name>
+    <additionalInfo/>
+    <id>cec5b706-9cff-4d9b-add9-9da0956cd508</id>
+    <type>Dog</type>
+    <breed>Black Labrador</breed>
+    <age>9</age>
+    <status>shop</status>
+  </pets>
+  <pets>
+    <colour>Black</colour>
+    <gender>female</gender>
+    <price>6000.0</price>
+    <breeder/>
+    <name>Tessie</name>
+    <additionalInfo/>
+    <id>d809bd54-3910-4318-9d36-8ae28bb2f1e6</id>
+    <type>Dog</type>
+    <breed>Mixed Labrador</breed>
+    <age>4</age>
+    <status>kennel</status>
+  </pets>
+  <pets>
+    <colour>Black</colour>
+    <gender>female</gender>
+    <price>10000.0</price>
+    <breeder>Jimmy</breeder>
+    <name>Nomi</name>
+    <additionalInfo/>
+    <id>ee183dbe-7da4-4012-9eae-5af35fcc9179</id>
+    <type>Dog</type>
+    <breed>Black Lab</breed>
+    <age>2</age>
+    <status>shop</status>
+  </pets>
+  <pets>
+    <colour>Spotted</colour>
+    <gender>male</gender>
+    <price>14000.0</price>
+    <breeder/>
+    <name>Diesel</name>
+    <additionalInfo/>
+    <id>24e5c98a-5854-4061-b924-b203f3c30640</id>
+    <type>Dog</type>
+    <breed>Bulldog</breed>
+    <age>3</age>
+    <status>shop</status>
+  </pets>
+  <pets>
+    <colour>Pink with black spots</colour>
+    <gender>male</gender>
+    <price>1.0</price>
+    <breeder/>
+    <name>Courage</name>
+    <additionalInfo/>
+    <id>0e864e42-989a-47d3-86b2-405c7c35d42f</id>
+    <type>Dog</type>
+    <breed>Cowardly</breed>
+    <age>10</age>
+    <status>shop</status>
+  </pets>
+  <pets>
+    <colour>Black Brown</colour>
+    <gender>male</gender>
+    <price>15000.0</price>
+    <breeder>Deutschland</breeder>
+    <name>Dogmeat</name>
+    <additionalInfo/>
+    <id>a3d4069c-4b7c-4a79-ba4b-de15715f6c6d</id>
+    <type>Dog</type>
+    <breed>German Shepherd</breed>
+    <age>2</age>
+    <status>shop</status>
+  </pets>
+  <pets>
+    <colour>Black Beige</colour>
+    <gender>male</gender>
+    <price>20000.0</price>
+    <breeder>Pernille</breeder>
+    <name>Teddy</name>
+    <additionalInfo/>
+    <id>db25acf1-a8de-4ae2-ab76-f0ffe2cbb855</id>
+    <type>Dog</type>
+    <breed>Finnish Lapdog</breed>
+    <age>9</age>
+    <status>shop</status>
+  </pets>
+  <pets>
+    <colour>Black</colour>
+    <gender>male</gender>
+    <price>10000.0</price>
+    <breeder>Pernille</breeder>
+    <name>Balou</name>
+    <additionalInfo/>
+    <id>4fddd104-7b0c-45eb-a78f-925cbd75ffad</id>
+    <type>Dog</type>
+    <breed>Finnish Lapdog</breed>
+    <age>7</age>
+    <status>shop</status>
+  </pets>
+  <pets>
+    <colour>Mangy</colour>
+    <gender>male</gender>
+    <price>1.0</price>
+    <breeder/>
+    <name>Fido</name>
+    <additionalInfo>Old</additionalInfo>
+    <id>3684c32a-8f8c-4204-9595-28c9c6827fb5</id>
+    <type>Dog</type>
+    <breed>Unknown</breed>
+    <age>16</age>
+    <status>kennel</status>
+  </pets>
+  <pets>
+    <colour>Camoflauged</colour>
+    <gender>undefined</gender>
+    <predator>true</predator>
+    <price>2000.0</price>
+    <name>Submariner</name>
+    <additionalInfo>Polypterus Bichir</additionalInfo>
+    <watertype>freshWater</watertype>
+    <id>9bd8b2ff-4739-41ae-ae60-4fbf8b7d4844</id>
+    <type>Fish</type>
+    <age>10</age>
+    <status>shop</status>
+  </pets>
+  <pets>
+    <colour>Natural Pattern</colour>
+    <gender>undefined</gender>
+    <predator>true</predator>
+    <price>1000.0</price>
+    <name>Pikey</name>
+    <additionalInfo>Northern Pike</additionalInfo>
+    <watertype>freshWater</watertype>
+    <id>b580c779-621b-43b9-9e74-703a23d4d4d2</id>
+    <type>Fish</type>
+    <age>10</age>
+    <status>shop</status>
+  </pets>
+  <pets>
+    <colour>Black</colour>
+    <gender>undefined</gender>
+    <predator>true</predator>
+    <price>1000.0</price>
+    <name>Sandy</name>
+    <additionalInfo>Zander</additionalInfo>
+    <watertype>freshWater</watertype>
+    <id>eaf75294-d677-40fc-a825-e02ded3cac71</id>
+    <type>Fish</type>
+    <age>14</age>
+    <status>kennel</status>
+  </pets>
+  <pets>
+    <colour>Natural Pattern</colour>
+    <gender>undefined</gender>
+    <predator>true</predator>
+    <price>1.0</price>
+    <name>Aborre</name>
+    <additionalInfo>Perch</additionalInfo>
+    <watertype>freshWater</watertype>
+    <id>823005f8-fb1d-4b5a-baba-ee7f65ae21aa</id>
+    <type>Fish</type>
+    <age>2</age>
+    <status>kennel</status>
+  </pets>
+  <pets>
+    <colour>Black with dots</colour>
+    <gender>undefined</gender>
+    <predator>true</predator>
+    <price>111.0</price>
+    <name>Gulpy</name>
+    <additionalInfo>Catfish</additionalInfo>
+    <watertype>freshWater</watertype>
+    <id>93a77555-c289-433c-81e8-2976a0868da3</id>
+    <type>Fish</type>
+    <age>5</age>
+    <status>kennel</status>
+  </pets>
+  <pets>
+    <colour>Fancy</colour>
+    <gender>undefined</gender>
+    <predator>true</predator>
+    <price>100000.0</price>
+    <name>Murry</name>
+    <additionalInfo>Murray Eel</additionalInfo>
+    <watertype>saltWater</watertype>
+    <id>66049f5d-44ea-46be-8293-8f30c98a67b1</id>
+    <type>Fish</type>
+    <age>50</age>
+    <status>kennel</status>
+  </pets>
+  <pets>
+    <colour>Orange with white stripes</colour>
+    <gender>undefined</gender>
+    <predator>false</predator>
+    <price>1000000.0</price>
+    <name>Nemo</name>
+    <additionalInfo>Performed in the hit animated film"Finding Nemo"</additionalInfo>
+    <watertype>saltWater</watertype>
+    <id>e731b2e4-39a4-4192-be29-6cb952f574e6</id>
+    <type>Fish</type>
+    <age>5</age>
+    <status>shop</status>
+  </pets>
+  <pets>
+    <colour>Green</colour>
+    <gender>undefined</gender>
+    <predator>true</predator>
+    <price>1.0</price>
+    <name>Gillz</name>
+    <additionalInfo>Has gills</additionalInfo>
+    <watertype>freshWater</watertype>
+    <id>b9894a4a-36c0-49a6-b07d-533d7efc95e3</id>
+    <type>Fish</type>
+    <age>10</age>
+  </pets>
+  <pets>
+    <colour>Grey White</colour>
+    <gender>undefined</gender>
+    <predator>true</predator>
+    <price>999999.0</price>
+    <name>Jaws</name>
+    <additionalInfo>Starred in the very first "Summer Blockbuster"</additionalInfo>
+    <watertype>saltWater</watertype>
+    <id>7fb1f316-6fd4-4543-b265-eb13856dc362</id>
+    <type>Fish</type>
+    <age>70</age>
+    <status>kennel</status>
+  </pets>
+  <pets>
+    <colour>Cream</colour>
+    <gender>male</gender>
+    <species>Dumbo Rat</species>
+    <price>60.0</price>
+    <name>Puff</name>
+    <additionalInfo/>
+    <id>b0d68983-657b-4e1e-80c0-e7e23fdba291</id>
+    <type>Rodent</type>
+    <bites>false</bites>
+    <age>1</age>
+    <status>kennel</status>
+  </pets>
+  <pets>
+    <colour>Grey Brown</colour>
+    <gender>male</gender>
+    <species>Rat</species>
+    <price>50.0</price>
+    <name>Scratch</name>
+    <additionalInfo/>
+    <id>ba3ecd05-33b4-4343-ae04-2a07430edee0</id>
+    <type>Rodent</type>
+    <bites>false</bites>
+    <age>2</age>
+    <status>shop</status>
+  </pets>
+  <pets>
+    <colour>Spotted</colour>
+    <gender>male</gender>
+    <species>Rat</species>
+    <price>1.0</price>
+    <name>Sushi</name>
+    <additionalInfo/>
+    <id>25e092c0-7995-402a-a7ed-4aac25261897</id>
+    <type>Rodent</type>
+    <bites>true</bites>
+    <age>1</age>
+    <status>kennel</status>
+  </pets>
+  <pets>
+    <colour>Black</colour>
+    <gender>male</gender>
+    <species>Rat</species>
+    <price>1.0</price>
+    <name>Bitey</name>
+    <additionalInfo/>
+    <id>f18f7711-bdbb-41c9-8bff-5721561aad5d</id>
+    <type>Rodent</type>
+    <bites>true</bites>
+    <age>2</age>
+    <status>shop</status>
+  </pets>
+  <pets>
+    <colour>Brown</colour>
+    <gender>female</gender>
+    <species>Capybara</species>
+    <price>40000.0</price>
+    <name>Chewy</name>
+    <additionalInfo/>
+    <id>236411f0-0e69-4e73-8105-0bfde94bf6b1</id>
+    <type>Rodent</type>
+    <bites>false</bites>
+    <age>10</age>
+    <status>shop</status>
+  </pets>
+  <pets>
+    <colour>Skin</colour>
+    <gender>male</gender>
+    <species>Desert Rat</species>
+    <price>1.0</price>
+    <name>Dusty</name>
+    <additionalInfo/>
+    <id>9d3b7a99-bda9-4071-b9d2-94173cc443ea</id>
+    <type>Rodent</type>
+    <bites>false</bites>
+    <age>1</age>
+    <status>kennel</status>
+  </pets>
+  <pets>
+    <colour>Beige</colour>
+    <gender>female</gender>
+    <species>Rat</species>
+    <price>1.0</price>
+    <name>Michi</name>
+    <additionalInfo/>
+    <id>6e9cbdb3-3fcb-430f-9bec-a6d209f77898</id>
+    <type>Rodent</type>
+    <bites>true</bites>
+    <age>1</age>
+    <status>kennel</status>
+  </pets>
+  <pets>
+    <colour>Grey</colour>
+    <gender>male</gender>
+    <species>Opposum</species>
+    <price>555.0</price>
+    <name>Slash</name>
+    <additionalInfo/>
+    <id>9cb8de02-cdbe-4f68-a31e-03ea825dcf26</id>
+    <type>Rodent</type>
+    <bites>true</bites>
+    <age>11</age>
+    <status>kennel</status>
   </pets>
 </PetList>

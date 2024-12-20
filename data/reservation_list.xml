@@ -9,63 +9,63 @@
     <dropOfDate>
       <month>12</month>
       <year>2024</year>
-      <day>17</day>
+      <day>18</day>
     </dropOfDate>
     <price>20.0</price>
     <pet>
-      <colour>ryytryr</colour>
+      <colour>Brown</colour>
       <gender>male</gender>
-      <price>567.0</price>
-      <breeder>ryrtyrt</breeder>
-      <name>gjfdhfd</name>
-      <additionalInfo>rtyryr</additionalInfo>
-      <id>22dd648b-5a42-454c-a7db-6677db3579d6</id>
+      <price>2065.0</price>
+      <breeder>Unknown</breeder>
+      <name>Maximiliam the 3rd</name>
+      <additionalInfo/>
+      <id>bcc70177-2908-4cc5-a101-72a886381bc1</id>
       <type>Cat</type>
-      <breed>tryry</breed>
-      <age>56</age>
+      <breed>Cat</breed>
+      <age>12</age>
       <status>kennel</status>
     </pet>
     <kennelRoom>
       <roomNumber>1</roomNumber>
     </kennelRoom>
     <customer>
-      <phoneNr>45674332</phoneNr>
-      <name>vkdfjkdnf</name>
-      <email>fnsdjn@wp.pl</email>
+      <phoneNr>52555556</phoneNr>
+      <name>Michael Anderson</name>
+      <email>michael234@gmail.com</email>
     </customer>
   </reservationList>
   <reservationList>
     <pickUpDate>
       <month>12</month>
       <year>2024</year>
-      <day>1</day>
+      <day>13</day>
     </pickUpDate>
     <dropOfDate>
       <month>12</month>
-      <year>2023</year>
-      <day>14</day>
+      <year>2024</year>
+      <day>12</day>
     </dropOfDate>
     <price>20.0</price>
     <pet>
-      <colour>ryytryr</colour>
-      <gender>male</gender>
-      <price>567.0</price>
-      <breeder>ryrtyrt</breeder>
-      <name>gjfdhfd</name>
-      <additionalInfo>rtyryr</additionalInfo>
-      <id>22dd648b-5a42-454c-a7db-6677db3579d6</id>
-      <type>Cat</type>
-      <breed>tryry</breed>
-      <age>56</age>
+      <colour>Yellow</colour>
+      <gender>female</gender>
+      <price>50.0</price>
+      <breeder>Jytte Breeds Dogs SRL</breeder>
+      <name>Kikky</name>
+      <additionalInfo/>
+      <id>0072e150-a983-417d-b47f-84a03d11bc69</id>
+      <type>Dog</type>
+      <breed>Russian Blue</breed>
+      <age>5</age>
       <status>archived</status>
     </pet>
     <kennelRoom>
       <roomNumber>1</roomNumber>
     </kennelRoom>
     <customer>
-      <phoneNr>45674332</phoneNr>
-      <name>vkdfjkdnf</name>
-      <email>fnsdjn@wp.pl</email>
+      <phoneNr>65465455</phoneNr>
+      <name>Vizzie Pop</name>
+      <email>vizzhiwe@hfee.com</email>
     </customer>
   </reservationList>
 </ReservationList>
